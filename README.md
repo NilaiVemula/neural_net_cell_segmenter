@@ -22,3 +22,8 @@ Project started in May 2020 by Nilai Vemula
 - Tensorflow: [FCN in Tensorflow](https://towardsdatascience.com/implementing-a-fully-convolutional-network-fcn-in-tensorflow-2-3c46fb61de3b)
 - FCN in Tensorflow for Segmentation: [GitHub](https://github.com/sagieppel/Fully-convolutional-neural-network-FCN-for-semantic-segmentation-Tensorflow-implementation)
 
+## Requirements
+This project should require numpy and tensorflow for developing the neural network as well as Pillow and opencv for
+ some image processing. A full list of requirements is present in `requirements.txt` and should be used with a
+  virtual environment based on Python 3.8.
+
