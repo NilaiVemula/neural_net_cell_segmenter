@@ -22,7 +22,6 @@ kiwisolver==1.2.0
 Markdown==3.2.2
 matplotlib==3.2.1
 more-itertools==8.3.0
--e git+https://github.com/NilaiVemula/neural_net_cell_segmenter.git@a5a52604d0ad5fb5377f029d107e58b484377598#egg=neural_net_cell_segmenter
 numpy==1.18.4
 oauthlib==3.1.0
 opencv-python==4.2.0.34

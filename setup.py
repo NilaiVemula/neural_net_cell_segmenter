@@ -29,7 +29,7 @@ setup(
     packages=find_packages(),
     install_requires=requirements,
     include_package_data=True,
-    package_data={'': ['data/']},
+    package_data={'neural_net_cell_segmenter': ['*', '*/*', '*/*/*', '*/*/*/*', '*/*/*/*/*']},  # find some other way
     classifiers=[
         "Programming Language :: Python :: 3.8",
         "License :: OSI Approved :: MIT License",
