@@ -1,13 +1,13 @@
 language: python
 python:
-  - "3.8"
-
-# command to install dependencies
+  - 3.8
+before_install:
+  - python --version
+  - pip install -U pip
+  - pip install -U pytest
+  - pip install codecov
 install:
-  - pip install -r requirements.txt
-  - python setup.py install
-
-# command to run tests
-script:
-  - pytest --cov-report html --cov-report xml --cov=./
-  - codecov
+  - pip install ".[test]" . # install package + test dependencies
+script: pytest # run tests
+after_success:
+  - codecov # submit coverage
