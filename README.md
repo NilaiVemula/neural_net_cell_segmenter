@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.com/NilaiVemula/neural_net_cell_segmenter.svg?branch=master)](https://travis-ci.com/NilaiVemula/neural_net_cell_segmenter)
+[![codecov](https://codecov.io/gh/NilaiVemula/neural_net_cell_segmenter/branch/master/graph/badge.svg)](https://codecov.io/gh/NilaiVemula/neural_net_cell_segmenter)
+
+
 # Neural Net Cell Segmenter
 Goal: develop a tool using machine learning to segment images of packed epithelial cell layers (for future use in pycellfit)
 
