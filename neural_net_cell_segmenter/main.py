@@ -16,7 +16,7 @@ def main():
 
 
 def read_raw():
-    im = Image.open('../data/raw/gonzalez.tif')
+    im = Image.open('data/raw/gonzalez.tif')
     # im.show()
 
 

@@ -1,7 +1,8 @@
 from PIL import Image
 import matplotlib.pyplot as plt
 import numpy as np
-import os
+from inspect import currentframe, getframeinfo
+from pathlib import Path
 
 # constant value that the image array is padded with
 PAD_VALUE = -1
@@ -21,7 +22,12 @@ def preprocess_ground_truth(watershed_file_name):
     :return: skeleton: np array where entire array is zeros except for the cell membranes with have values of 255
     :rtype: numpy.ndarray
     """
-    file = os.path.join('../data/ground_truth', watershed_file_name, 'Segments/Segment_0_000.tif')
+    # getting script location of package
+    script_location = getframeinfo(currentframe()).filename
+    parent = Path(script_location).resolve().parent
+
+    # locating input file
+    file = parent.joinpath('data/ground_truth', watershed_file_name, 'Segments/Segment_0_000.tif')
     # file = '../data/ground_truth/gonzalez/Segments/Segment_0_000.tif'
 
     # open the watershed segmented image
@@ -72,7 +78,8 @@ def preprocess_ground_truth(watershed_file_name):
     # save skeleton segmented image
     im = Image.fromarray(skeleton)
     mask_name = watershed_file_name + '_mask' + '.tif'
-    output_path = os.path.join('../data/ground_truth', watershed_file_name, mask_name)
+
+    output_path = parent.joinpath('data/ground_truth', watershed_file_name, mask_name)
     # output_path = '../data/ground_truth/gonzalez/gonzalez_mask.tif'
     im.save(output_path)
 
