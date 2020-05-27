@@ -27,3 +27,10 @@ This project should require numpy and tensorflow for developing the neural netwo
  some image processing. A full list of requirements is present in `requirements.txt` and should be used with a
   virtual environment based on Python 3.8.
 
+## Test Data
+For testing data, we are using a variety of images (some from James White). Each raw tif image is found in `data/raw
+`. Each raw image is then loaded into SeedWaterSegmenter and is manually segmented using a watershed method. The
+ output files from SeedWaterSegmenter are located in `data/ground_truth/<name_of_raw_tif>`. The watershed-segmented
+  file is located in `data/ground_truth/<name_of_raw_tif>/Segments/Segment_0_000.tif`. This file is then converted to
+   a black and white mesh by the `neural_net_cell_segmenter/ground_truth_preprocess.py` script. The mesh is saved in
+    `data/ground_truth/<name_of_raw_tif>_mask.tif`.

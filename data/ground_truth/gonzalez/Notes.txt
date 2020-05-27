@@ -1,0 +1,5 @@
+# SeedWater notes file version 1
+# This file is the generated notes from SeedWater.
+# If you edit it by hand, do not change the frame headers!
+# ---------------- Frame 0 ----------------
+Type Notes Here (per frame)
