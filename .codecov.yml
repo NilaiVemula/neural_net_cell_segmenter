@@ -22,5 +22,4 @@ comment:
     paths: null
 
 ignore:
-  - "tests"
   - "**/__init__.py"
