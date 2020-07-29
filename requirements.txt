@@ -20,7 +20,7 @@ joblib==0.15.1
 Keras-Preprocessing==1.1.2
 kiwisolver==1.2.0
 Markdown==3.2.2
-matplotlib==3.2.1
+matplotlib==3.3.0
 more-itertools==8.4.0
 numpy==1.18.4
 oauthlib==3.1.0
