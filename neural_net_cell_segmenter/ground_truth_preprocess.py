@@ -1,14 +1,18 @@
-from PIL import Image
-import matplotlib.pyplot as plt
-import numpy as np
 from inspect import currentframe, getframeinfo
 from pathlib import Path
+
+import matplotlib.pyplot as plt
+import numpy as np
+from PIL import Image
 
 # constant value that the image array is padded with
 PAD_VALUE = -1
 
 
 def pad_with(vector, pad_width, iaxis, kwargs):
+    """helper function that is called by np.pad to surround a nparray with a constant value
+    Example: [[0,0],[0,0]] becomes [[-1,-1,-1, -1],[-1, 0, 0, -1],[-1, 0, 0, -1],[-1,-1,-1, -1]]
+    """
     pad_value = kwargs.get('padder', PAD_VALUE)
     vector[:pad_width[0]] = pad_value
     vector[-pad_width[1]:] = pad_value
