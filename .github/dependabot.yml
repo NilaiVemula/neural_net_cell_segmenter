@@ -1,0 +1,43 @@
+version: 2
+updates:
+- package-ecosystem: pip
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "11:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: google-auth
+    versions:
+    - 1.24.0
+    - 1.25.0
+    - 1.26.0
+    - 1.26.1
+    - 1.27.0
+    - 1.27.1
+    - 1.28.0
+    - 1.28.1
+    - 1.29.0
+  - dependency-name: matplotlib
+    versions:
+    - 3.3.4
+    - 3.4.0
+  - dependency-name: setuptools
+    versions:
+    - 52.0.0
+    - 53.0.0
+    - 53.1.0
+    - 54.0.0
+    - 54.1.1
+    - 54.1.2
+    - 54.2.0
+  - dependency-name: pip
+    versions:
+    - "21.0"
+    - 21.0.1
+  - dependency-name: pytest
+    versions:
+    - 6.2.2
+  - dependency-name: absl-py
+    versions:
+    - 0.11.0
